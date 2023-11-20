@@ -8,13 +8,16 @@ namespace Builder
 {
     public class Lantern
     {
-        public string Housing { get; set; }
-        public string LightSource { get; set; }
-        public string Handle { get; set; }
+        private List<string> _parts = new List<string>();
 
-        public string Display()
+        public void AddPart(string part)
         {
-            return ($"Housing: {Housing}, Light Source: {LightSource}, Handle: {Handle}");
+            _parts.Add(part);
+        }
+
+        public string GetConfiguration()
+        {
+            return "Lantern configuration: " + string.Join(", ", _parts) + "\n";
         }
     }
 }
