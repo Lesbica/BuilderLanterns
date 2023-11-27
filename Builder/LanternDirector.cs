@@ -2,24 +2,23 @@
 {
     public class LanternDirector
     {
-        private ILanternBuilder _builder;
+        private ILanternBuilder builder;
 
         public LanternDirector(ILanternBuilder builder)
         {
-            _builder = builder;
+            this.builder = builder;
         }
 
-        public void ConstructStandardLantern()
+        public void ConstructLantern(string baseImage, string bulbImage, string standImage)
         {
-            _builder.BuildHousing();
-            _builder.BuildLightSource();
-            _builder.BuildHandle();
+            builder.BuildBase(baseImage);
+            builder.BuildBulb(bulbImage);
+            builder.BuildStand(standImage);
         }
 
-        public void ConstructCustomLantern()
+        public Lantern GetConstructedLantern()
         {
-            _builder.BuildHousing();
-            _builder.BuildHandle();
+            return builder.GetLantern();
         }
     }
 }

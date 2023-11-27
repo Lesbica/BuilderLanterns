@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prototype;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace Builder
 {
     public interface ILanternBuilder
     {
-        void BuildHousing();
-        void BuildLightSource();
-        void BuildHandle();
+        void BuildBase(string imagePath);
+        void BuildBulb(string imagePath);
+        void BuildStand(string imagePath);
         Lantern GetLantern();
+        LanternPrototype GetPrototype();
     }
 }

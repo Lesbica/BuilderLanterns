@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderLanterns", "BuilderLanterns\BuilderLanterns.csproj", "{5E17372B-82E4-454C-8FF4-29E466EC2ACD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderLanterns", "BuilderLanterns\BuilderLanterns.csproj", "{5E17372B-82E4-454C-8FF4-29E466EC2ACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{90C9FAB0-E5FF-47D5-B152-59913681EE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.csproj", "{90C9FAB0-E5FF-47D5-B152-59913681EE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{7AFBF66E-09B8-4FB8-B3FF-A4E856AC6A57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{90C9FAB0-E5FF-47D5-B152-59913681EE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90C9FAB0-E5FF-47D5-B152-59913681EE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90C9FAB0-E5FF-47D5-B152-59913681EE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFBF66E-09B8-4FB8-B3FF-A4E856AC6A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFBF66E-09B8-4FB8-B3FF-A4E856AC6A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFBF66E-09B8-4FB8-B3FF-A4E856AC6A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFBF66E-09B8-4FB8-B3FF-A4E856AC6A57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

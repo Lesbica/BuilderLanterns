@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prototype;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,28 +9,36 @@ namespace Builder
 {
     public class LanternBuilder : ILanternBuilder
     {
-        private Lantern _lantern = new Lantern();
+        private Lantern lantern = new Lantern();
 
-        public void BuildHousing()
+        public void BuildBase(string imagePath)
         {
-            _lantern.AddPart("Housing");
+            lantern.BaseImage = imagePath;
         }
 
-        public void BuildLightSource()
+        public void BuildBulb(string imagePath)
         {
-            _lantern.AddPart("Light Source");
+            lantern.BulbImage = imagePath;
         }
 
-        public void BuildHandle()
+        public void BuildStand(string imagePath)
         {
-            _lantern.AddPart("Handle");
+            lantern.StandImage = imagePath;
         }
 
         public Lantern GetLantern()
         {
-            Lantern result = _lantern;
-            _lantern = new Lantern(); // Очищаємо будівельника для нового ліхтаря
-            return result;
+            return lantern;
+        }
+
+        public LanternPrototype GetPrototype()
+        {
+            return new LanternPrototype
+            {
+                BaseImage = lantern.BaseImage,
+                BulbImage = lantern.BulbImage,
+                StandImage = lantern.StandImage
+            };
         }
     }
 }

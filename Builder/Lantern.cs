@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using Prototype;
 
 namespace Builder
 {
     public class Lantern
     {
-        private List<string> _parts = new List<string>();
+        public string BaseImage { get; set; }
+        public string BulbImage { get; set; }
+        public string StandImage { get; set; }
+        // Додаткові властивості для інших частин ліхтаря
 
-        public void AddPart(string part)
+        public override string ToString()
         {
-            _parts.Add(part);
-        }
-
-        public string GetConfiguration()
-        {
-            return "Lantern configuration: " + string.Join(", ", _parts) + "\n";
+            return $"Lantern: Base - {BaseImage}, Bulb - {BulbImage}, Stand - {StandImage}";
         }
     }
 }
