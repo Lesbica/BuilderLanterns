@@ -4,9 +4,9 @@
     {
         private ILanternBuilder builder;
 
-        public LanternDirector(ILanternBuilder builder)
+        public ILanternBuilder Builder
         {
-            this.builder = builder;
+            set { builder = value; }
         }
 
         public void ConstructLantern(string baseImage, string bulbImage, string standImage)

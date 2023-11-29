@@ -8,12 +8,15 @@ namespace BuilderLanterns
     public partial class Form1 : Form
     {
         private LanternBuilder builder;
+        private LanternDirector director = new LanternDirector();
         private LanternPrototype savedLanternPrototype;
 
         public Form1()
         {
             InitializeComponent();
             builder = new LanternBuilder();
+            director = new LanternDirector();
+            director.Builder = builder;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,9 +25,7 @@ namespace BuilderLanterns
             string bulbImage = "img\\lantern-light-bulb-600x600.jpg";
             string standImage = "img\\xScreenshot_35-420x340.png.pagespeed.ic.v5gKnwfZ6C.png";
 
-            builder.BuildBase(baseImage);
-            builder.BuildBulb(bulbImage);
-            builder.BuildStand(standImage);
+            director.ConstructLantern(baseImage, bulbImage, standImage);
 
             pictureBox2.Image = Image.FromFile(baseImage);
             pictureBox1.Image = Image.FromFile(bulbImage);
@@ -37,9 +38,7 @@ namespace BuilderLanterns
             string bulbImage = "img\\svitlodiodnij-lihtarik-munkees-led-tent-lamp-blue-10286.1000x1000.jpg";
             string standImage = "img\\fonarik-led-teleskopicheskiy-s-magnitom-sturm-4050-01-2s-96300926587869.jpg";
 
-            builder.BuildBase(baseImage);
-            builder.BuildBulb(bulbImage);
-            builder.BuildStand(standImage);
+            director.ConstructLantern(baseImage, bulbImage, standImage);
 
             pictureBox2.Image = Image.FromFile(baseImage);
             pictureBox1.Image = Image.FromFile(bulbImage);

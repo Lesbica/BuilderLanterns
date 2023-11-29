@@ -13,6 +13,5 @@ namespace Builder
         void BuildBulb(string imagePath);
         void BuildStand(string imagePath);
         Lantern GetLantern();
-        LanternPrototype GetPrototype();
     }
 }
